@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<p><font size="10">Useful Tools and Resources</font></p>
+
 # Those courses are very helpful and FREE to build a solid theoretical foundation:
 
 * Robot Kinematics: <https://www.coursera.org/specializations/modernrobotics>, yYou can enroll in the course with the audit mode for free.
