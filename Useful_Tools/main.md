@@ -6,7 +6,7 @@ layout: default
 
 # Those courses are very helpful and FREE to build a solid theoretical foundation:
 
-* Robot Kinematics: <https://www.coursera.org/specializations/modernrobotics>, yYou can enroll in the course with the audit mode for free.
+* Robot Kinematics: <https://www.coursera.org/specializations/modernrobotics>, you can enroll in the course with the audit mode for free.
 
 * Introduction to Artificial Intelligence: <https://www.udacity.com/course/intro-to-artificial-intelligence--cs271>
 
@@ -18,9 +18,16 @@ layout: default
 
 * Instructions I wrote to start to use the Kuka Youbot arm: <https://scazlab.github.io/kuka_setup_guide.html>
 
+
 # It is important to get your hands dirty
 
 [ROS (Robot operating System)](https://www.ros.org/) is one of the most popular systems we use to code the robots. You can also run simulators with it. The ROS website contains enough tutorials for you to start with.
+
+# I am learning how to combine statistical learning with logic recently (e.g., markov logic network, beyasian logic), and here are a few useful links:
+
+## Markov Network/Markov Random Fields
+<https://www.youtube.com/watch?v=iBQkZdPHlCs>
+<https://www.youtube.com/watch?v=meBWAboEWQk>
 
 # More to come...
 
