@@ -15,10 +15,4 @@ I have worked on a few projects on animal cognition:
 
 * Macaques, at the Developmental and Comparative Psychology Lab at Peking University
 
-![](/assets/img/macaque.jpg)
-(Ada, the macaque in the picture, refused to continue the experiment unless I shake ... feet.)
-
 * Pandas, at Peking University Center for Nature and Society
-
-![](/assets/img/panda.jpg)
-(I was trained to be able to distinguish 6 different pandas.)
