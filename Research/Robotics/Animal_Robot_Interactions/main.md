@@ -13,6 +13,9 @@ Robots (e.g., social robots, or other robots like Roombas) are more prevalent at
 
 * A media article, which is also a very good summary of this work, can be found: <https://spectrum.ieee.org/automaton/robotics/robotics-software/dogs-obey-commands-given-by-social-robots>. Note: Aibo was not included in the study because we do not have access to an Aibo. Aibo with proper behaviours is considered as a social robot. In a previous study mentioned in my paper, although only for a few seconds, dogs did display social responses as if they were interacting with another dog.
 
+* The study was included in the "Best of 2020 With Pepper and NAO!" video compiled by SoftBank Robotics, the manufacturer of NAO (the robot used in this study).
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QNfaUycVAXo?start=87" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 * A Facebook story by NAO Robot on my Animal Robot Interaction paper can be found: <https://www.facebook.com/NAO.therobot/posts/1520451144781778>.
 
 * A meida report in Chinese by Sina on my Animal Robot Interaction paper can be found: <https://tech.sina.cn/2020-05-27/detail-iirczymk3752699.d.html>. Note: Aibo was not included in the study because we do not have access to an Aibo. Aibo with proper behaviours is considered as a social robot. In a previous study mentioned in my paper, although only for a few seconds, dogs did display social responses as if they were interacting with another dog.
