@@ -14,7 +14,7 @@ var View = {
             'stroke-opacity': 0.2,
         },
         start: {
-            fill: '#0d0',
+            fill: 'blue',
             'stroke-opacity': 0.2,
         },
         end: {
@@ -22,7 +22,7 @@ var View = {
             'stroke-opacity': 0.2,
         },
         opened: {
-            fill: '#98fb98',
+            fill: '#add8e6',
             'stroke-opacity': 0.2,
         },
         closed: {

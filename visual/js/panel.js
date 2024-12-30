@@ -18,14 +18,14 @@ var Panel = {
         $('#play_panel').css({
             top: $algo.offset().top + $algo.outerHeight() + 20
         });
-        $('#button2').attr('disabled', 'disabled');
+        $('#button2').attr('disabled', 'disabled');		
     },
     /**
      * Get the user selected path-finder.
      * TODO: clean up this messy code.
      */
     getFinder: function() {
-        var finder, selected_header, heuristic, allowDiagonal, biDirectional, dontCrossCorners, weight, trackRecursion, timeLimit;
+        var finder, selected_header, selected_heuristic, allowDiagonal, biDirectional, dontCrossCorners, weight, trackRecursion, timeLimit;
         
         selected_header = $(
             '#algorithm_panel ' +
@@ -35,30 +35,29 @@ var Panel = {
         switch (selected_header) {
 
         case 'astar_header':
-            allowDiagonal = typeof $('#astar_section ' +
-                                     '.allow_diagonal:checked').val() !== 'undefined';
-            biDirectional = typeof $('#astar_section ' +
-                                     '.bi-directional:checked').val() !=='undefined';
-            dontCrossCorners = typeof $('#astar_section ' +
-                                     '.dont_cross_corners:checked').val() !=='undefined';
+            allowDiagonal = false;
+            biDirectional = false;
+            dontCrossCorners = false;
 
             /* parseInt returns NaN (which is falsy) if the string can't be parsed */
-            weight = parseInt($('#astar_section .spinner').val()) || 1;
-            weight = weight >= 1 ? weight : 1; /* if negative or 0, use 1 */
+            weight = 1;
 
-            heuristic = $('input[name=astar_heuristic]:checked').val();
+            selected_heuristic = $('input[name=astar_heuristic]:checked').val();	
+			
+			/* $('#idTest').text("testing " + PF.Heuristic[selected_heuristic]);/*/			
+			
             if (biDirectional) {
                 finder = new PF.BiAStarFinder({
                     allowDiagonal: allowDiagonal,
                     dontCrossCorners: dontCrossCorners,
-                    heuristic: PF.Heuristic[heuristic],
+                    heuristic: PF.Heuristic[selected_heuristic],
                     weight: weight
                 });
             } else {
                 finder = new PF.AStarFinder({
                     allowDiagonal: allowDiagonal,
                     dontCrossCorners: dontCrossCorners,
-                    heuristic: PF.Heuristic[heuristic],
+                    heuristic: PF.Heuristic[selected_heuristic],
                     weight: weight
                 });
             }
@@ -91,18 +90,18 @@ var Panel = {
                                      '.bi-directional:checked').val() !== 'undefined';
             dontCrossCorners = typeof $('#bestfirst_section ' +
                                      '.dont_cross_corners:checked').val() !=='undefined';
-            heuristic = $('input[name=bestfirst_heuristic]:checked').val();
+            selected_heuristic = $('input[name=bestfirst_heuristic]:checked').val();
             if (biDirectional) {
                 finder = new PF.BiBestFirstFinder({
                     allowDiagonal: allowDiagonal,
                     dontCrossCorners: dontCrossCorners,
-                    heuristic: PF.Heuristic[heuristic]
+                    heuristic: PF.Heuristic[selected_heuristic]
                 });
             } else {
                 finder = new PF.BestFirstFinder({
                     allowDiagonal: allowDiagonal,
                     dontCrossCorners: dontCrossCorners,
-                    heuristic: PF.Heuristic[heuristic]
+                    heuristic: PF.Heuristic[selected_heuristic]
                 });
             }
             break;
@@ -130,22 +129,22 @@ var Panel = {
         case 'jump_point_header':
             trackRecursion = typeof $('#jump_point_section ' +
                                      '.track_recursion:checked').val() !== 'undefined';
-            heuristic = $('input[name=jump_point_heuristic]:checked').val();
+            selected_heuristic = $('input[name=jump_point_heuristic]:checked').val();
             
             finder = new PF.JumpPointFinder({
               trackJumpRecursion: trackRecursion,
-              heuristic: PF.Heuristic[heuristic],
+              heuristic: PF.Heuristic[selected_heuristic],
               diagonalMovement: PF.DiagonalMovement.IfAtMostOneObstacle
             });
             break;
         case 'orth_jump_point_header':
             trackRecursion = typeof $('#orth_jump_point_section ' +
                                      '.track_recursion:checked').val() !== 'undefined';
-            heuristic = $('input[name=orth_jump_point_heuristic]:checked').val();
+            selected_heuristic = $('input[name=orth_jump_point_heuristic]:checked').val();
 
             finder = new PF.JumpPointFinder({
               trackJumpRecursion: trackRecursion,
-              heuristic: PF.Heuristic[heuristic],
+              heuristic: PF.Heuristic[selected_heuristic],
               diagonalMovement: PF.DiagonalMovement.Never
             });
             break;
@@ -157,7 +156,7 @@ var Panel = {
             trackRecursion = typeof $('#ida_section ' +
                                      '.track_recursion:checked').val() !== 'undefined';
 
-            heuristic = $('input[name=jump_point_heuristic]:checked').val();
+            selected_heuristic = $('input[name=jump_point_heuristic]:checked').val();
 
             weight = parseInt($('#ida_section input[name=astar_weight]').val()) || 1;
             weight = weight >= 1 ? weight : 1; /* if negative or 0, use 1 */
@@ -172,7 +171,7 @@ var Panel = {
               trackRecursion: trackRecursion,
               allowDiagonal: allowDiagonal,
               dontCrossCorners: dontCrossCorners,
-              heuristic: PF.Heuristic[heuristic],
+              heuristic: PF.Heuristic[selected_heuristic],
               weight: weight
             });
 
